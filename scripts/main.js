@@ -7,36 +7,42 @@ const projects = [
   {
     title: 'Hit Game Predictor 🎮',
     category: 'ml',
+    url: 'https://github.com/kesterho/hit_game_predictor/blob/main/1_1_PART1_LESSON1.ipynb',
     tags: ['classification', 'xgboost', 'tabular'],
     blurb: 'Classifier that predicts which video games sell 1M+ copies — from genre, platform, publisher, release year.',
   },
   {
     title: 'Perceptron from Scratch 🧠',
     category: 'ml',
+    url: 'https://github.com/kesterho/perceptron_from_scratch/blob/main/1_1_PART1_LESSON2.ipynb',
     tags: ['numpy', 'from-scratch', 'mlp'],
     blurb: 'Built a single neuron in NumPy: forward pass, loss, backprop. Then scaled to an MLP on the 8x8 digits dataset.',
   },
   {
     title: 'MNIST CNN ✍️',
     category: 'vision',
+    url: 'https://github.com/kesterho/AI_ML_DL_PROJECTS/blob/main/1_1_PART1_LESSON3.ipynb',
     tags: ['pytorch', 'cnn', 'images'],
     blurb: 'Convolutional neural network in PyTorch that recognises handwritten digits. 98%+ test accuracy.',
   },
   {
     title: 'Terrain Classifier 🏞️',
     category: 'vision',
+    url: 'https://github.com/kesterho/AI_ML_DL_PROJECTS/blob/main/1_1_PART1_LESSON4.ipynb',
     tags: ['resnet', 'transfer-learning', 'images'],
     blurb: 'Transfer learning with ResNet-18 on Intel Image Classification — 6 terrain types, 4 approaches compared.',
   },
   {
     title: 'IMDB Sentiment 🎬',
     category: 'nlp',
+    url: 'https://github.com/kesterho/AI_ML_DL_PROJECTS/blob/main/1_1_PART1_LESSON5.ipynb',
     tags: ['transformers', 'lstm', 'text'],
     blurb: 'Compared Bag-of-Words, RNN, LSTM, and DistilBERT on movie-review sentiment. Transformers won by a mile.',
   },
   {
     title: 'Selfie → Emoji Mood 😊',
     category: 'aiapp',
+    url: 'https://github.com/kesterho/AI_ML_DL_PROJECTS/blob/main/1_1_PART1_LESSON6.ipynb',
     tags: ['gradio', 'huggingface', 'deployed'],
     blurb: 'Live on Hugging Face Spaces. Upload a selfie, get an emoji that matches your vibe. Built with Gradio.',
   },
@@ -54,6 +60,9 @@ const renderProjects = (list) => {
             <div class="tags">
                 ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
             </div>
+            ${p.url
+              ? `<a class="chip project-link" href="${p.url}" target="_blank" rel="noopener noreferrer">Open Project</a>`
+              : ''}
             </article>
       `).join('');
 

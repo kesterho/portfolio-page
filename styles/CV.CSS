@@ -204,6 +204,10 @@ main { max-width: 960px; margin: 0 auto; padding: 2rem; }
   letter-spacing: 0.02em;
 }
 
+.project-card .project-link {
+  margin-top: 0.8rem;
+}
+
 
 .empty-state {
   text-align: center;
