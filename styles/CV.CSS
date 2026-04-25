@@ -211,6 +211,17 @@ main { max-width: 960px; margin: 0 auto; padding: 2rem; }
   letter-spacing: 0.02em;
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+
+.project-links .chip {
+  margin-top: 0;
+}
+
 .project-card .project-link {
   margin-top: 0.8rem;
 }

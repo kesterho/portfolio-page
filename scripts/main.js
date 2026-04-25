@@ -5,6 +5,14 @@ let activeCategory = 'all';
 
 const projects = [
   {
+    title: 'Whack-a-Mole: Emoji Edition 🎯',
+    category: 'game',
+    url: 'https://whack-a-mole-emoji-edition.vercel.app/',
+    repoUrl: 'https://github.com/kesterho/whack-a-mole-emojiEdition',
+    tags: ['html', 'css', 'javascript'],
+    blurb: 'A fast emoji whack-a-mole game with a live play link and the source code on GitHub.',
+  },
+  {
     title: 'Hit Game Predictor 🎮',
     category: 'ml',
     url: 'https://github.com/kesterho/hit_game_predictor/blob/main/1_1_PART1_LESSON1.ipynb',
@@ -60,9 +68,14 @@ const renderProjects = (list) => {
             <div class="tags">
                 ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
             </div>
-            ${p.url
-              ? `<a class="chip project-link" href="${p.url}" target="_blank" rel="noopener noreferrer">Open Project</a>`
-              : ''}
+            <div class="project-links">
+              ${p.url
+                ? `<a class="chip project-link lime" href="${p.url}" target="_blank" rel="noopener noreferrer">${p.repoUrl ? 'Play Game' : 'Open Project'}</a>`
+                : ''}
+              ${p.repoUrl
+                ? `<a class="chip project-link plum" href="${p.repoUrl}" target="_blank" rel="noopener noreferrer">GitHub</a>`
+                : ''}
+            </div>
             </article>
       `).join('');
 
