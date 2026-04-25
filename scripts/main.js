@@ -6,7 +6,7 @@ let activeCategory = 'all';
 const projects = [
   {
     title: 'Whack-a-Mole: Emoji Edition 🎯',
-    category: 'game',
+    category: 'games',
     url: 'https://whack-a-mole-emoji-edition.vercel.app/',
     repoUrl: 'https://github.com/kesterho/whack-a-mole-emojiEdition',
     tags: ['html', 'css', 'javascript'],
@@ -87,6 +87,7 @@ const renderProjects = (list) => {
 
     <div class="filters">
       <button class="chip filter-btn ${activeCategory === 'all'    ? 'active' : ''}" data-category="all">All</button>
+      <button class="chip filter-btn ${activeCategory === 'games'  ? 'active' : ''}" data-category="games">Games</button>
       <button class="chip filter-btn ${activeCategory === 'ml'     ? 'active' : ''}" data-category="ml">ML</button>
       <button class="chip filter-btn ${activeCategory === 'vision' ? 'active' : ''}" data-category="vision">Vision</button>
       <button class="chip filter-btn ${activeCategory === 'nlp'    ? 'active' : ''}" data-category="nlp">NLP</button>
