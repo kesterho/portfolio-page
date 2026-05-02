@@ -13,6 +13,15 @@ const projects = [
     blurb: 'A fast emoji whack-a-mole game with a live play link and the source code on GitHub.',
   },
   {
+    title: 'Staircase',
+    category: 'aiapp',
+    url: 'https://learning-101-zeta.vercel.app/',
+    repoUrl: 'https://github.com/kesterho/learning-101',
+    ctaLabel: 'Go To App',
+    tags: ['ai', 'web-app', 'vercel'],
+    blurb: 'AI app project with live deployment on Vercel and source code on GitHub.',
+  },
+  {
     title: 'Hit Game Predictor 🎮',
     category: 'ml',
     url: 'https://github.com/kesterho/hit_game_predictor/blob/main/1_1_PART1_LESSON1.ipynb',
@@ -70,7 +79,7 @@ const renderProjects = (list) => {
             </div>
             <div class="project-links">
               ${p.url
-                ? `<a class="chip project-link lime" href="${p.url}" target="_blank" rel="noopener noreferrer">${p.repoUrl ? 'Play Game' : 'Open Project'}</a>`
+                ? `<a class="chip project-link lime" href="${p.url}" target="_blank" rel="noopener noreferrer">${p.ctaLabel || (p.repoUrl ? 'Play Game' : 'Open Project')}</a>`
                 : ''}
               ${p.repoUrl
                 ? `<a class="chip project-link plum" href="${p.repoUrl}" target="_blank" rel="noopener noreferrer">GitHub</a>`
