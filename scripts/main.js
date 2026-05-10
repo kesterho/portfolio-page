@@ -5,6 +5,15 @@ let activeCategory = 'all';
 
 const projects = [
   {
+    title: 'DB AI App',
+    category: 'aiapp',
+    url: 'https://db-ruby-nu.vercel.app/',
+    repoUrl: 'https://github.com/kesterho/DB',
+    ctaLabel: 'Open DB',
+    tags: ['ai', 'web-app', 'vercel'],
+    blurb: 'My new AI app, DB, with a live Vercel deployment and source code on GitHub.',
+  },
+  {
     title: 'Whack-a-Mole: Emoji Edition 🎯',
     category: 'games',
     url: 'https://whack-a-mole-emoji-edition.vercel.app/',
